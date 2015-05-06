@@ -94,9 +94,8 @@ Brief Guide
     SeaJson sjObj(jstr);
     long fileSize = sjObj["menu"]["size"];
 
-    SeaJson& sjPopup = sjObj["menu"]["popup"];
     SeaJson sjMenuItem;
-    sjMenuItem += sjPopup["menuitem"];
+    sjMenuItem += sjPopup["menu"]["popup"]["menuitem"];
     std::string strCloseOnclick = sjMenuItem[2]["onclick"];
 ```
 
